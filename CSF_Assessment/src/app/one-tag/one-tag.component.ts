@@ -18,10 +18,12 @@ export class OneTagComponent
   news!:News[];
   sub! : Subscription;
   item:string=''
+  time:string=''
   ngOnInit()
   {
     this.item = this.route.snapshot.params['tag'];
-    this.sub = this.upload.getNews(this.item).subscribe
+    this.time=this.route.snapshot.params['time'];
+    this.sub = this.upload.getNews(this.item, this.time).subscribe
     (
       result=>this.news=result
     )

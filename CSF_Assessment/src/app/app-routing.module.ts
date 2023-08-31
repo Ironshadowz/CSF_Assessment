@@ -8,7 +8,7 @@ const routes: Routes =
 [
   {path:'view2', component:PostNewsComponent},
   {path:'view0', component:AllTagsComponent},
-  {path:'view1/:tag', component:OneTagComponent}
+  {path:'view1/:tag/:time', component:OneTagComponent}
 ];
 
 @NgModule({

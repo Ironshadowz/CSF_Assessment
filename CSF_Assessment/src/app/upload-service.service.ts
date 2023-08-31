@@ -24,8 +24,8 @@ export class UploadServiceService
   {
     return this.http.get<Tags[]>(url+'/getTags/'+time);
   }
-  getNews(news:string)
+  getNews(news:string, time:string)
   {
-    return this.http.get<News[]>(url+'/getNews/'+news);
+    return this.http.get<News[]>(url+'/getNews/'+news+'/'+time);
   }
 }
