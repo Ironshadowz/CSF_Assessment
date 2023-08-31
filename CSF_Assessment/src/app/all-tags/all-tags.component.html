@@ -1,0 +1,23 @@
+<label for="time">Time</label>
+<select name="time" id="time" (onChange)="update()">
+  <option value="5">5 mins</option>
+  <option value="15">15 mins</option>
+  <option value="30">30 mins</option>
+  <option value="45">45 mins</option>
+  <option value="60">60 mins</option>
+</select>
+<div>
+  <button (click)="post()">Post News</button>
+</div>
+<table>
+  <thead>
+    <tr>
+      <td><h3>Top Tags</h3></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of tags">
+      <td ><a routerLink="/view1/{{i.tag}}">{{i.tag}}({{i.count}})</a></td>
+    </tr>
+  </tbody>
+</table>

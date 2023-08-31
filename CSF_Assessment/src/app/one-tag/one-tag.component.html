@@ -1,0 +1,20 @@
+<div>
+  <h2>List of News with {{item}}</h2>
+</div>
+<div>
+  <button routerLink="/view0">Back</button>
+</div>
+<div>
+  <button routerLink="/view2">Post News</button>
+</div>
+<table>
+  <tbody >
+    <tr *ngFor="let new of news">
+      <td>{{new.title}}</td>
+      <td>Publish date: {{new.postDate}}</td>
+      <img [src]="new.image">
+      <td><p>{{new.description}}</p></td>
+      <td>{{new.tags}}</td>
+    </tr>
+  </tbody>
+</table>
